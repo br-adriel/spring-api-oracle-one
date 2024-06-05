@@ -43,4 +43,8 @@ public class Medico {
         if (dados.telefone() != null) this.telefone = dados.telefone();
         if (dados.nome() != null) this.endereco.atualizarInformacoes(dados.endereco());
     }
+
+    public void excluir() {
+        this.ativo = false;
+    }
 }
