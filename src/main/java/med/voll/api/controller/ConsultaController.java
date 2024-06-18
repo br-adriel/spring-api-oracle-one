@@ -23,13 +23,8 @@ public class ConsultaController {
             @Valid
             DadosAgendamentoConsulta dados
     ) {
-        agenda.agendar(dados);
-        return ResponseEntity.ok(new DadosDetalhamentoConsulta(
-                null,
-                null,
-                null,
-                null
-        ));
+        var detalhesAgendamento = agenda.agendar(dados);
+        return ResponseEntity.ok(detalhesAgendamento);
     }
 
     @DeleteMapping
